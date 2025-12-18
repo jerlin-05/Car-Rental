@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-dotenv.config(); // 🔥 REQUIRED HERE
+dotenv.config(); 
 
 import Stripe from "stripe";
 

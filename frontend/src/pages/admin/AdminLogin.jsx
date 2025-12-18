@@ -11,7 +11,7 @@ export default function AdminLogin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // DEMO admin login
+    
     if (email === "admin@car.com" && password === "admin123") {
       login("admin-token", "admin");
       navigate("/admin/dashboard");

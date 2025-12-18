@@ -1,8 +1,6 @@
-// 🔥 MUST BE FIRST — DO NOT MOVE
 import dotenv from "dotenv";
 dotenv.config();
 
-// -----------------------------
 
 import express from "express";
 import cors from "cors";
@@ -18,28 +16,28 @@ import dealerCarRoutes from "./routes/dealer.cars.routes.js";
 import dealerBookingRoutes from "./routes/dealer.bookings.routes.js";
 import dealerUpgradeRoutes from "./routes/dealer.upgrade.routes.js";
 
-// 🔍 ENV DEBUG (KEEP THIS)
+
 console.log("STRIPE KEY FROM ENV:", process.env.STRIPE_SECRET_KEY);
 console.log("MONGO URI FROM ENV:", process.env.MONGO_URI);
 
-// -----------------------------
+
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-// -----------------------------
+
 // DATABASE
 mongoose
   .connect(process.env.MONGO_URI)
-  .then(() => console.log("✅ MongoDB connected"))
+  .then(() => console.log(" MongoDB connected"))
   .catch((err) => {
     console.error("❌ MongoDB error:", err.message);
     process.exit(1);
   });
 
-// -----------------------------
+
 // ROUTES
 app.use("/api/auth", authRoutes);
 app.use("/api/cars", carRoutes);
@@ -53,10 +51,9 @@ app.use("/api/dealer", dealerUpgradeRoutes);
 
 app.use("/api/bookings", bookingRoutes);
 
-// -----------------------------
-// SERVER
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-  console.log(`✅ Backend running on http://localhost:${PORT}`);
+  console.log(` Backend running on http://localhost:${PORT}`);
 });

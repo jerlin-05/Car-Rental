@@ -20,7 +20,7 @@ export default function Navbar() {
         alignItems: "center",
       }}
     >
-      {/* LOGO */}
+     
       <Link
         to="/"
         style={{
@@ -33,19 +33,19 @@ export default function Navbar() {
         CarRental
       </Link>
 
-      {/* LINKS */}
+      
       <div style={{ display: "flex", gap: "20px", alignItems: "center" }}>
         <Link className="nav-link" to="/">Home</Link>
         <Link className="nav-link" to="/cars">Cars</Link>
 
-        {/* ADMIN */}
+      
         {user && role === "admin" && (
           <Link className="nav-link" to="/admin/dashboard">
             Admin
           </Link>
         )}
 
-        {/* DEALER */}
+        
         {user && role === "dealer" && (
           <>
             <Link className="nav-link" to="/dealer/dashboard">Dealer</Link>
@@ -54,7 +54,7 @@ export default function Navbar() {
           </>
         )}
 
-        {/* BEFORE LOGIN */}
+
         {!user && (
           <>
             <Link className="nav-link" to="/login">Login</Link>

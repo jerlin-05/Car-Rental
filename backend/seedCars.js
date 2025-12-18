@@ -52,7 +52,7 @@ const cars = [
 const seed = async () => {
   await Car.deleteMany();
   await Car.insertMany(cars);
-  console.log("✅ Cars seeded");
+  console.log(" Cars seeded");
   process.exit();
 };
 

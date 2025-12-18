@@ -8,7 +8,7 @@ router.post("/create", protect, async (req, res) => {
   try {
     const { carId, startDate, endDate, totalAmount } = req.body;
 
-    // 🔍 HARD LOGS (important)
+  
     console.log("USER:", req.user);
     console.log("AMOUNT:", totalAmount);
 
@@ -41,7 +41,7 @@ router.post("/create", protect, async (req, res) => {
 
     console.log("STRIPE SESSION CREATED:", session.url);
 
-    // ✅ THIS IS WHAT FRONTEND NEEDS
+    
     return res.json({ url: session.url });
 
   } catch (error) {

@@ -37,7 +37,7 @@ export default function Home() {
 
   return (
     <div className="page">
-      {/* HERO */}
+     
       <div
   style={{
     position: "relative",
@@ -46,7 +46,7 @@ export default function Home() {
     marginBottom: "60px",
   }}
 >
-  {/* 🔥 Background Image */}
+
   <div
     style={{
       position: "absolute",
@@ -58,7 +58,7 @@ export default function Home() {
     }}
   />
 
-  {/* 🌑 Gradient Overlay */}
+  
   <div
     style={{
       position: "absolute",
@@ -68,7 +68,7 @@ export default function Home() {
     }}
   />
 
-  {/* 🧾 CONTENT */}
+ 
   <div
     style={{
       position: "relative",
@@ -85,7 +85,7 @@ export default function Home() {
       Affordable daily rentals across major Indian cities
     </p>
 
-    {/* 🔍 SEARCH */}
+    
     <div
       style={{
         marginTop: "28px",
@@ -108,7 +108,7 @@ export default function Home() {
     </div>
   </div>
 </div>
-{/* ===== BECOME DEALER CTA ===== */}
+
 <div
   style={{
     maxWidth: "1200px",
@@ -203,7 +203,7 @@ export default function Home() {
     </div>
   );
 }
-{/* ===== BECOME A DEALER CTA ===== */}
+
 <div className="dealer-cta">
   <h2>Become a Dealer & Earn Money</h2>
   <p>

@@ -7,7 +7,7 @@ export function AuthProvider({ children }) {
   const [token, setToken] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // 🔄 Restore login on refresh
+  //  Restore login on refresh
   useEffect(() => {
     const savedToken = localStorage.getItem("token");
     const savedUser = localStorage.getItem("user");
@@ -20,7 +20,7 @@ export function AuthProvider({ children }) {
     setLoading(false);
   }, []);
 
-  // ✅ Login
+  // Login
   const login = (token, userData) => {
     localStorage.setItem("token", token);
     localStorage.setItem("user", JSON.stringify(userData));
@@ -29,7 +29,7 @@ export function AuthProvider({ children }) {
     setUser(userData);
   };
 
-  // 🚪 Logout
+  //  Logout
   const logout = () => {
     localStorage.clear();
     setUser(null);

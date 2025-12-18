@@ -15,7 +15,7 @@ export default function CarDetails() {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
 
-  /* 🔹 Fetch car */
+  
   useEffect(() => {
     const fetchCar = async () => {
       try {
@@ -37,7 +37,7 @@ export default function CarDetails() {
   if (loading) return <h2 style={{ padding: "40px" }}>Loading...</h2>;
   if (!car) return <h2 style={{ padding: "40px" }}>Car not found</h2>;
 
-  /* 📅 Date validation */
+  
   const isValidDateRange =
     startDate &&
     endDate &&
@@ -52,7 +52,7 @@ export default function CarDetails() {
 
   const total = isValidDateRange ? days * car.price : 0;
 
-  /* 💳 Stripe Payment */
+  /*  Stripe Payment */
   const handlePayment = async () => {
     if (!token) {
       navigate("/login");
@@ -112,7 +112,7 @@ export default function CarDetails() {
 
       <h3 style={{ marginTop: "10px" }}>₹{car.price} / day</h3>
 
-      {/* 📅 Date pickers */}
+      {/*  Date pickers */}
       <div style={{ display: "flex", gap: "16px", marginTop: "20px" }}>
         <input
           type="date"
@@ -133,14 +133,14 @@ export default function CarDetails() {
         />
       </div>
 
-      {/* 💰 Total */}
+      {/*  Total */}
       {isValidDateRange && (
         <p style={{ marginTop: "16px", fontWeight: "600" }}>
           Total ({days} days): ₹{total}
         </p>
       )}
 
-      {/* 🔘 Button */}
+      {/*  Button */}
       <button
         className="btn"
         disabled={!isValidDateRange}

@@ -19,7 +19,7 @@ export default function DealerSuccess() {
         }
       );
 
-      // update role locally
+      
       login(token, "dealer");
       navigate("/dealer/dashboard");
     };

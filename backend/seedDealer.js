@@ -29,9 +29,9 @@ const seedDealer = async () => {
       role: "dealer",
     });
 
-    console.log("✅ Dealer created successfully");
-    console.log("📧 Email: dealer@carrental.com");
-    console.log("🔑 Password: dealer123");
+    console.log(" Dealer created successfully");
+    console.log(" Email: dealer@carrental.com");
+    console.log(" Password: dealer123");
 
     process.exit();
   } catch (err) {

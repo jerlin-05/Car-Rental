@@ -25,7 +25,7 @@ export default function Login() {
       // ✅ SAVE FULL USER OBJECT
       login(res.data.token, res.data.user);
 
-      // ✅ ROLE BASED REDIRECT
+      // ROLE BASED REDIRECT
       if (res.data.user.role === "admin") {
         navigate("/admin");
       } else if (res.data.user.role === "dealer") {

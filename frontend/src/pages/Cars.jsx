@@ -7,7 +7,7 @@ export default function Cars() {
   const [cars, setCars] = useState([]);
   const [filteredCars, setFilteredCars] = useState([]);
 
-  // FILTER STATES
+
   const [search, setSearch] = useState("");
   const [location, setLocation] = useState("");
   const [fuel, setFuel] = useState("");

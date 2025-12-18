@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.post("/dealer-subscription", protect, async (req, res) => {
   try {
-    // 🔥 CREATE STRIPE HERE (NOT AT TOP)
+   
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
     const { plan } = req.body;

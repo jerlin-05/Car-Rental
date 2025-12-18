@@ -3,13 +3,13 @@ import Car from "../models/Car.js";
 
 const router = express.Router();
 
-/* GET ALL CARS */
+
 router.get("/", async (req, res) => {
   const cars = await Car.find();
   res.json(cars);
 });
 
-/* ✅ GET CAR BY ID (IMPORTANT) */
+
 router.get("/:id", async (req, res) => {
   try {
     const car = await Car.findById(req.params.id);

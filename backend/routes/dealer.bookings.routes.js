@@ -4,7 +4,7 @@ import { dealerAuth } from "../middleware/dealerAuth.js";
 
 const router = express.Router();
 
-/* GET DEALER BOOKINGS */
+
 router.get("/", dealerAuth, async (req, res) => {
   try {
     const bookings = await Booking.find()
@@ -15,7 +15,7 @@ router.get("/", dealerAuth, async (req, res) => {
       })
       .populate("user", "name email");
 
-    // remove bookings that don't belong to dealer
+    
     const dealerBookings = bookings.filter(b => b.car !== null);
 
     res.json(dealerBookings);
